@@ -11,18 +11,20 @@
 		</style>
 	</head>
 	<body>
-		<textarea id="textarea" name="" rows="10" cols=""></textarea>
-		<button id="button" value="提交" onblur="false">提交</button>
+		<textarea id="textarea" name="" oninput="fn()" rows="10" cols=""></textarea>
+		<button id="but" value="提交" onblur="false">提交</button>
 	</body>
 	<script type="text/javascript">
-		button.onclick=function(){
-			console.log(textarea.value.length)
-				if (textarea.value.length<60) {
-				button.disabled=false
+	var Btn=document.getElementById("but")
+	function fn(){
+		console.log(textarea.value.length)
+				if (textarea.value.length>60) {
+				but.setAttribute("disabled","disabled")
 			}else{
-				button.disabled=true
+				but.removeAttribute("disabled","disabled")
 			}
-		}
+	}
+			
 		
 		
 	</script>
