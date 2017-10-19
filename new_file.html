@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>gx</title>
+		<style type="text/css">
+		button a{
+			text-decoration: none;
+			color: black;
+		}
+		</style>
+	</head>
+	<body>
+		<textarea id="textarea" name="" rows="10" cols=""></textarea>
+		<button id="button" value="提交" onblur="false">提交</button>
+	</body>
+	<script type="text/javascript">
+		button.onclick=function(){
+			console.log(textarea.value.length)
+				if (textarea.value.length<60) {
+				button.disabled=false
+			}else{
+				button.disabled=true
+			}
+		}
+		
+		
+	</script>
+</html>
